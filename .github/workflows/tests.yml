@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
+
       - name: Prepare cache
         uses: actions/cache@v2
         with:
@@ -26,3 +27,6 @@ jobs:
       
       - name: Install dependencies
         run: npm ci
+      
+      - name: Run tests
+        run: npm run test:ci
